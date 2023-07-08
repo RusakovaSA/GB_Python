@@ -10,6 +10,7 @@ for i in range(n):
     elem_1.append(elem)
 print(f"Первое множество: {elem_1}.")
 print()
+
 m = int(input("Введите количество элементов первого множества: "))
 elem_2 = []
 for i in range(m):
@@ -17,8 +18,10 @@ for i in range(m):
     elem_2.append(elem)
 print(f"Второе множество: {elem_2}.")
 print()
+
 elem_3 = elem_1 + elem_2
 print(f"Все эементы обоих множеств {elem_3}")
+
 dict = dict.fromkeys(elem_3,0)
 sorted_dict = dict.keys()
 sorted_dict = sorted(sorted_dict)
