@@ -1,0 +1,30 @@
+@font-face {
+    font-family: New_font;
+    src: url(fonts/20987.otf);
+}
+
+body {
+    width: 1000px;
+    margin: auto;
+    margin-block-end: 50px;
+    margin-top: 50px;
+    background-color: rgb(231, 235, 221);
+    font-family: New_font, sans-serif;
+}
+h1 {
+    color: rgb(37, 61, 28);
+  }
+  
+  h2 {
+    color: rgb(57, 69, 54);
+  }
+  
+  a {
+    color: rgb(128, 0, 107);
+  }
+  
+  img {
+    margin-left: auto;
+    width: 1000px;
+  }
+  
