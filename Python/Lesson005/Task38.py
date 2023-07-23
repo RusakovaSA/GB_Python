@@ -7,9 +7,6 @@ def read_file():
         info = [i.strip() for i in file]
         return info
 
-def write_file():
-    pass
-
 def print_info(info):
     print("№    **    ФИО    **    номер телефона")
     for id, info in enumerate(info):
@@ -21,8 +18,15 @@ def search_info(info):
         res = list(filter(lambda x: search in x, info))
         print('\n'.join(res))
 
-def change_info():
-    pass
+def change_info(info):
+    with open("phone_direct.txt", "r+", encoding="utf-8") as file:
+        change = input("Введите номер строки, в которую хотите внести изменения: ")
+        elem_old = input("Введите значение, которое хотите изменить: ")
+        elem_new = input("Введите новое значение: ")
+        res = [change.replace(elem_old, elem_new) for change in info]
+        info = res
+        print("")
+        print_info(info)           
 
 def delete_info(info):
     with open("phone_direct.txt", "r+", encoding="utf-8") as file:
@@ -52,11 +56,11 @@ def menu():
             search_info(info)
             print("")
         elif n == 3:
-            pass
+            change_info(info)
+            print("")
         elif n == 4:
             delete_info(info)
             print("")
-
 
 if __name__ == "__main__":
     menu()
