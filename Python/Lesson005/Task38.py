@@ -16,22 +16,10 @@ def print_info(info):
         print(id + 1, info)
 
 def search_info(info):
-    # insert = input("Введите имя или фамилию: ")
-    # info_1 = list(map(insert, info))
-    # print(info_1)
     with open("phone_direct.txt", "r+", encoding="utf-8") as file:
         search = input("Введите имя или фамилию: ")
-        # if info.count(search):
-        #     print('Элемент присутствует в списке!')
-        # else:
-        #     print('Элемент отсутствует в списке!')
-        # if len(search):
-        #     print('Элемент присутствует в списке!')
-        #     # print(*search)
-        # else:
-        #     print('Элемент отсутствует в списке!')
         res = list(filter(lambda x: search in x, info))
-        print(str(res))
+        print('\n'.join(res))
 
 def change_info():
     pass
