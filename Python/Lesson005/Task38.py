@@ -26,8 +26,8 @@ def change_info(info):
         res = [change.replace(elem_old, elem_new) for change in info]
         info = res
         print("")
-        print_info(info)           
-
+        print_info(info)
+               
 def delete_info(info):
     with open("phone_direct.txt", "r+", encoding="utf-8") as file:
         index_del = int(input("Введите номер строки на удаление: "))
@@ -35,6 +35,7 @@ def delete_info(info):
         print(f"Строка {index_del} с записью удалена.")
         print("")
         print_info(info)
+        file.write(info)
 
 def menu():
     info = read_file()
